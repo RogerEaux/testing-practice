@@ -17,7 +17,8 @@
   "main": "testPractice.js",
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "watch": "jest --watch"
   },
   "jest": {
     "transform": {
