@@ -74,4 +74,18 @@ describe('Calculator', () => {
       expect(calculator.substract(NaN, 1)).toBe(null);
     });
   });
+
+  describe('Multiply', () => {
+    test('Multiply', () => {
+      expect(calculator.multiply(1, 1)).toBe(1);
+    });
+
+    test('One or both of the arguments are non numeric', () => {
+      expect(calculator.multiply('Y', true)).toBe(null);
+    });
+
+    test('One or both of the arguments are NaN', () => {
+      expect(calculator.multiply(NaN, 1)).toBe(null);
+    });
+  });
 });
