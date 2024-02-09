@@ -105,5 +105,9 @@ describe('Calculator', () => {
     test('Dividing by 0', () => {
       expect(calculator.divide(1, 0)).toBe(Infinity);
     });
+
+    test('Dividing 0 by 0', () => {
+      expect(calculator.divide(0, 0)).toBe(NaN);
+    });
   });
 });
