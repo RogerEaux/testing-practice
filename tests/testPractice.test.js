@@ -5,6 +5,7 @@ import {
   reverseString,
   calculator,
   caesarCipher,
+  analyzeArray,
 } from '../modules/testPractice';
 
 describe('Capitalize', () => {
@@ -160,5 +161,16 @@ describe('Ceasar cipher', () => {
 
   test('Message is not a string', () => {
     expect(caesarCipher(1, 1)).toBe(null);
+  });
+});
+
+describe('Analyze array', () => {
+  test('Analyze array', () => {
+    expect(analyzeArray([1, 8, 3, 4, 2, 6])).toStrictEqual({
+      average: 4,
+      min: 1,
+      max: 8,
+      length: 6,
+    });
   });
 });
