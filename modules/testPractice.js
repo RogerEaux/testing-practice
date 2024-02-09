@@ -59,7 +59,7 @@ export function ceasarCipher(message, key = 1) {
     let letterCode = message.charCodeAt(i);
 
     //  Shift letter
-    letterCode += key;
+    letterCode += key % 26;
 
     //  Wrap around if shifted code is greater than Z or less than A
     if (letterCode > 90) {
