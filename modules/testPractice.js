@@ -9,11 +9,7 @@ export function reverseString(string) {
   if (!string) return string;
 
   //  Split string into array, reverse it and join it back into string
-  string = string.split('');
-  string.reverse();
-  string = string.join('');
-
-  return string;
+  return string.split('').reverse().join('');
 }
 
 export const calculator = (function () {
