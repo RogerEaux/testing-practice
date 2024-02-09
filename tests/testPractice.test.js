@@ -36,4 +36,8 @@ describe('Reverse string', () => {
   test('String is null', () => {
     expect(reverseString(null)).toBe(null);
   });
+
+  test('String is not a palindrome', () => {
+    expect(reverseString('rewind')).toBe('dniwer');
+  });
 });
