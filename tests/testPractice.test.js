@@ -60,4 +60,18 @@ describe('Calculator', () => {
       expect(calculator.add(NaN, 1)).toBe(null);
     });
   });
+
+  describe('Substract', () => {
+    test('Substract', () => {
+      expect(calculator.substract(1, 1)).toBe(0);
+    });
+
+    test('One or both of the arguments are non numeric', () => {
+      expect(calculator.substract('Y', true)).toBe(null);
+    });
+
+    test('One or both of the arguments are NaN', () => {
+      expect(calculator.substract(NaN, 1)).toBe(null);
+    });
+  });
 });
