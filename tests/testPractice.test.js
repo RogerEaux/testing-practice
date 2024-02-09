@@ -138,6 +138,10 @@ describe('Ceasar cipher', () => {
     expect(caesarCipher('CAESAR', 0)).toBe('CAESAR');
   });
 
+  test('Key is not an integer', () => {
+    expect(caesarCipher('MORI', true)).toBe(null);
+  });
+
   test('Letters wrap around Z', () => {
     expect(caesarCipher('Z', 1)).toBe('A');
   });
