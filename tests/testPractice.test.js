@@ -1,6 +1,11 @@
 // A capitalize function that takes a string and returns it with the first character capitalized.
 
-import { capitalize, reverseString, calculator } from '../modules/testPractice';
+import {
+  capitalize,
+  reverseString,
+  calculator,
+  ceasarCipher,
+} from '../modules/testPractice';
 
 describe('Capitalize', () => {
   test('Capitalize', () => {
@@ -109,5 +114,11 @@ describe('Calculator', () => {
     test('Dividing 0 by 0', () => {
       expect(calculator.divide(0, 0)).toBe(NaN);
     });
+  });
+});
+
+describe('ceasarCipher', () => {
+  test('Ceasar cipher', () => {
+    expect(ceasarCipher('SALAD')).toBe('TBMBE');
   });
 });
