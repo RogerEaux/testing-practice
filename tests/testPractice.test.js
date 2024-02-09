@@ -17,3 +17,7 @@ test('First element in string is a number', () => {
 test('String is null', () => {
   expect(capitalize(null)).toBe(null);
 });
+
+test('String is one letter', () => {
+  expect(capitalize('f')).toBe('F');
+});
