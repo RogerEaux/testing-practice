@@ -1,9 +1,9 @@
 // A capitalize function that takes a string and returns it with the first character capitalized.
 
-import { capitalize } from '../modules/testPractice';
+import { capitalize, reverseString } from '../modules/testPractice';
 
 describe('Capitalize', () => {
-  test('Happy path', () => {
+  test('Capitalize', () => {
     expect(capitalize('capital')).toBe('Capital');
   });
 
@@ -21,5 +21,11 @@ describe('Capitalize', () => {
 
   test('String is one letter', () => {
     expect(capitalize('f')).toBe('F');
+  });
+});
+
+describe('Reverse string', () => {
+  test('Reverse string', () => {
+    expect(reverseString('racecar')).toBe('racecar');
   });
 });
