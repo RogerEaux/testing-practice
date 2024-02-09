@@ -9,3 +9,7 @@ test('Empty string', () => {
 test('Happy path', () => {
   expect(capitalize('capital')).toBe('Capital');
 });
+
+test('First element in string is a number', () => {
+  expect(capitalize('42')).toBe('42');
+});
