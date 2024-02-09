@@ -145,4 +145,8 @@ describe('Ceasar cipher', () => {
   test('Letters wrap around A', () => {
     expect(caesarCipher('A', -1)).toBe('Z');
   });
+
+  test('Message contains non upper case letters', () => {
+    expect(caesarCipher('imperator', 1)).toBe('JNQFSBUPS');
+  });
 });
