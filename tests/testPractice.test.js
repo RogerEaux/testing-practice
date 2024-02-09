@@ -101,5 +101,9 @@ describe('Calculator', () => {
     test('One or both of the arguments are NaN', () => {
       expect(calculator.divide(NaN, 1)).toBe(null);
     });
+
+    test('Dividing by 0', () => {
+      expect(calculator.divide(1, 0)).toBe(Infinity);
+    });
   });
 });
