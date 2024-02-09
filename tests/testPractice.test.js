@@ -173,4 +173,8 @@ describe('Analyze array', () => {
       length: 6,
     });
   });
+
+  test('Input is empty array', () => {
+    expect(analyzeArray([])).toBe(null);
+  });
 });
