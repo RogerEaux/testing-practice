@@ -13,3 +13,13 @@ export function reverseString(string) {
 
   return string;
 }
+
+export const calculator = (function () {
+  function add(x, y) {
+    return x + y;
+  }
+
+  return {
+    add,
+  };
+})();
