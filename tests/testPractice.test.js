@@ -130,6 +130,10 @@ describe('Ceasar cipher', () => {
     expect(ceasarCipher('VINI', -1)).toBe('UHMH');
   });
 
+  test('Key is greater than 25', () => {
+    expect(ceasarCipher('VIDI', 42)).toBe('LYTY');
+  });
+
   test('Letters wrap around Z', () => {
     expect(ceasarCipher('Z', 1)).toBe('A');
   });
