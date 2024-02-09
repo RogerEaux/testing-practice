@@ -125,4 +125,8 @@ describe('ceasarCipher', () => {
   test('Key not given', () => {
     expect(ceasarCipher('VICI')).toBe('WJDJ');
   });
+
+  test('Key is negative', () => {
+    expect(ceasarCipher('VINI', -1)).toBe('UHMH');
+  });
 });
