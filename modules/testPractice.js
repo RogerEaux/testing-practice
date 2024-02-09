@@ -17,9 +17,13 @@ export function reverseString(string) {
 }
 
 export const calculator = (function () {
+  function isNumber(num) {
+    //  A number must be of type number and not NaN
+    return typeof num === 'number' && !Number.isNaN(num);
+  }
+
   function add(x, y) {
-    //  Check if input is a number
-    if (typeof x !== 'number' || typeof y !== 'number') return null;
+    if (!isNumber(x) || !isNumber(y)) return null;
 
     return x + y;
   }
