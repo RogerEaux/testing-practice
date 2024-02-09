@@ -134,6 +134,10 @@ describe('Ceasar cipher', () => {
     expect(ceasarCipher('VIDI', 42)).toBe('LYTY');
   });
 
+  test('Key is zero', () => {
+    expect(ceasarCipher('CAESAR', 0)).toBe('CAESAR');
+  });
+
   test('Letters wrap around Z', () => {
     expect(ceasarCipher('Z', 1)).toBe('A');
   });
