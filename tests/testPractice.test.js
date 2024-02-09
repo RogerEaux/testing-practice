@@ -32,4 +32,8 @@ describe('Reverse string', () => {
   test('String is empty', () => {
     expect(reverseString('')).toBe('');
   });
+
+  test('String is null', () => {
+    expect(reverseString(null)).toBe(null);
+  });
 });
