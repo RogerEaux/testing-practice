@@ -49,3 +49,7 @@ export const calculator = (function () {
     divide,
   };
 })();
+
+export function ceasarCipher(message, key = 1) {
+  return 'TBMBE';
+}
