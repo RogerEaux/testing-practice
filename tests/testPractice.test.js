@@ -52,8 +52,12 @@ describe('Calculator', () => {
       expect(calculator.add(1, 1)).toBe(2);
     });
 
-    test('One or both of the arguments are not a number', () => {
+    test('One or both of the arguments are non numeric', () => {
       expect(calculator.add('Y', true)).toBe(null);
+    });
+
+    test('One or both of the arguments are NaN', () => {
+      expect(calculator.add(NaN, 1)).toBe(null);
     });
   });
 });
