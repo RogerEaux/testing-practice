@@ -80,7 +80,7 @@ export function caesarCipher(message, key = 1) {
 }
 
 export function analyzeArray(array) {
-  if (array.length === 0) return null;
+  if (array.length === 0 || !Array.isArray(array)) return null;
 
   function getAverage(arr) {
     const totalSum = arr.reduce((total, current) => total + current);
