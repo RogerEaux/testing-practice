@@ -28,4 +28,8 @@ describe('Reverse string', () => {
   test('Reverse string', () => {
     expect(reverseString('racecar')).toBe('racecar');
   });
+
+  test('String is empty', () => {
+    expect(reverseString('')).toBe('');
+  });
 });
