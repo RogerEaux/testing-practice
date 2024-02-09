@@ -88,4 +88,18 @@ describe('Calculator', () => {
       expect(calculator.multiply(NaN, 1)).toBe(null);
     });
   });
+
+  describe('Divide', () => {
+    test('Divide', () => {
+      expect(calculator.divide(1, 1)).toBe(1);
+    });
+
+    test('One or both of the arguments are non numeric', () => {
+      expect(calculator.divide('Y', true)).toBe(null);
+    });
+
+    test('One or both of the arguments are NaN', () => {
+      expect(calculator.divide(NaN, 1)).toBe(null);
+    });
+  });
 });
