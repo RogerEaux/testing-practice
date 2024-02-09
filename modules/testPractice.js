@@ -80,10 +80,18 @@ export function caesarCipher(message, key = 1) {
 }
 
 export function analyzeArray(array) {
+  if (array.length === 0) return null;
+
+  function getAverage(arr) {
+    const totalSum = arr.reduce((total, current) => total + current);
+
+    return totalSum / arr.length;
+  }
+
   return {
-    average: 4,
-    min: 1,
-    max: 8,
-    length: 6,
+    average: getAverage(array),
+    min: Math.min(...array),
+    max: Math.max(...array),
+    length: array.length,
   };
 }
