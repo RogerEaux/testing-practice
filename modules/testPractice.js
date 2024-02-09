@@ -51,5 +51,18 @@ export const calculator = (function () {
 })();
 
 export function ceasarCipher(message, key = 1) {
-  return 'TBMBE';
+  //  Cipher uses upper case so all chars must be upper case
+  message = message.toUpperCase();
+
+  let encrypted = '';
+  for (let i = 0; i < message.length; i += 1) {
+    let letterCode = message.charCodeAt(i);
+
+    //  Shift letter
+    letterCode += key;
+
+    encrypted += String.fromCharCode(letterCode);
+  }
+
+  return encrypted;
 }
