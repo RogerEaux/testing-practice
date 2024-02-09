@@ -153,4 +153,8 @@ describe('Ceasar cipher', () => {
   test('Message contains non letters from the alphabet', () => {
     expect(caesarCipher('.1A', 1)).toBe('.1B');
   });
+
+  test('Message is not a string', () => {
+    expect(caesarCipher(1, 1)).toBe(null);
+  });
 });
