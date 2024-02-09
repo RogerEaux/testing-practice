@@ -119,6 +119,10 @@ describe('Calculator', () => {
 
 describe('ceasarCipher', () => {
   test('Ceasar cipher', () => {
-    expect(ceasarCipher('SALAD')).toBe('TBMBE');
+    expect(ceasarCipher('SALAD', 1)).toBe('TBMBE');
+  });
+
+  test('Key not given', () => {
+    expect(ceasarCipher('VICI')).toBe('WJDJ');
   });
 });
