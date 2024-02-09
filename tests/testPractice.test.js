@@ -177,4 +177,8 @@ describe('Analyze array', () => {
   test('Input is empty array', () => {
     expect(analyzeArray([])).toBe(null);
   });
+
+  test('Input is not an array', () => {
+    expect(analyzeArray('Array')).toBe(null);
+  });
 });
