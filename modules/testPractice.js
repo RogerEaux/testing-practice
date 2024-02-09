@@ -50,7 +50,7 @@ export const calculator = (function () {
   };
 })();
 
-export function ceasarCipher(message, key = 1) {
+export function caesarCipher(message, key = 1) {
   //  Cipher uses upper case so all chars must be upper case
   message = message.toUpperCase();
 

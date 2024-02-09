@@ -4,7 +4,7 @@ import {
   capitalize,
   reverseString,
   calculator,
-  ceasarCipher,
+  caesarCipher,
 } from '../modules/testPractice';
 
 describe('Capitalize', () => {
@@ -119,30 +119,30 @@ describe('Calculator', () => {
 
 describe('Ceasar cipher', () => {
   test('Ceasar cipher', () => {
-    expect(ceasarCipher('SALAD', 1)).toBe('TBMBE');
+    expect(caesarCipher('SALAD', 1)).toBe('TBMBE');
   });
 
   test('Key not given', () => {
-    expect(ceasarCipher('VICI')).toBe('WJDJ');
+    expect(caesarCipher('VICI')).toBe('WJDJ');
   });
 
   test('Key is negative', () => {
-    expect(ceasarCipher('VINI', -1)).toBe('UHMH');
+    expect(caesarCipher('VINI', -1)).toBe('UHMH');
   });
 
   test('Key is greater than 25', () => {
-    expect(ceasarCipher('VIDI', 42)).toBe('LYTY');
+    expect(caesarCipher('VIDI', 42)).toBe('LYTY');
   });
 
-  test('Key is zero', () => {
-    expect(ceasarCipher('CAESAR', 0)).toBe('CAESAR');
+  test('Key is 0', () => {
+    expect(caesarCipher('CAESAR', 0)).toBe('CAESAR');
   });
 
   test('Letters wrap around Z', () => {
-    expect(ceasarCipher('Z', 1)).toBe('A');
+    expect(caesarCipher('Z', 1)).toBe('A');
   });
 
   test('Letters wrap around A', () => {
-    expect(ceasarCipher('A', -1)).toBe('Z');
+    expect(caesarCipher('A', -1)).toBe('Z');
   });
 });
