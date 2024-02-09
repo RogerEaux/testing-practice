@@ -1,6 +1,6 @@
 // A capitalize function that takes a string and returns it with the first character capitalized.
 
-import { capitalize, reverseString } from '../modules/testPractice';
+import { capitalize, reverseString, calculator } from '../modules/testPractice';
 
 describe('Capitalize', () => {
   test('Capitalize', () => {
@@ -43,5 +43,13 @@ describe('Reverse string', () => {
 
   test('String contains spaces', () => {
     expect(reverseString('Reverse me')).toBe('em esreveR');
+  });
+});
+
+describe('Calculator', () => {
+  describe('Add', () => {
+    test('Add', () => {
+      expect(calculator.add(1, 1)).toBe(2);
+    });
   });
 });
