@@ -13,3 +13,7 @@ test('Happy path', () => {
 test('First element in string is a number', () => {
   expect(capitalize('42')).toBe('42');
 });
+
+test('String is null', () => {
+  expect(capitalize(null)).toBe(null);
+});
