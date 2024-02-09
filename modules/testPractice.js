@@ -58,14 +58,17 @@ export function caesarCipher(message, key = 1) {
   for (let i = 0; i < message.length; i += 1) {
     let letterCode = message.charCodeAt(i);
 
-    //  Shift letter
-    letterCode += key % 26;
+    //  Code is within the upper case letters
+    if (letterCode >= 65 && letterCode <= 90) {
+      //  Shift letter
+      letterCode += key % 26;
 
-    //  Wrap around if shifted code is greater than Z or less than A
-    if (letterCode > 90) {
-      letterCode -= 26;
-    } else if (letterCode < 65) {
-      letterCode += 26;
+      //  Wrap around if shifted code is greater than Z or less than A
+      if (letterCode > 90) {
+        letterCode -= 26;
+      } else if (letterCode < 65) {
+        letterCode += 26;
+      }
     }
 
     encrypted += String.fromCharCode(letterCode);
