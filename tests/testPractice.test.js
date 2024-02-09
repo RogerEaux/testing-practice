@@ -51,5 +51,9 @@ describe('Calculator', () => {
     test('Add', () => {
       expect(calculator.add(1, 1)).toBe(2);
     });
+
+    test('One or both of the arguments are not a number', () => {
+      expect(calculator.add('Y', true)).toBe(null);
+    });
   });
 });
