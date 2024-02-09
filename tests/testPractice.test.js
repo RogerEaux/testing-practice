@@ -40,4 +40,8 @@ describe('Reverse string', () => {
   test('String is not a palindrome', () => {
     expect(reverseString('rewind')).toBe('dniwer');
   });
+
+  test('String contains spaces', () => {
+    expect(reverseString('Reverse me')).toBe('em esreveR');
+  });
 });
