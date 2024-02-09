@@ -5,5 +5,11 @@ export function capitalize(string) {
 }
 
 export function reverseString(string) {
+  if (!string) return string;
+
+  string = string.split('');
+  string.reverse();
+  string = string.join('');
+
   return string;
 }
