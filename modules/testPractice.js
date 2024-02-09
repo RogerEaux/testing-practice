@@ -82,10 +82,17 @@ export function caesarCipher(message, key = 1) {
 export function analyzeArray(array) {
   if (array.length === 0 || !Array.isArray(array)) return null;
 
-  function getAverage(arr) {
-    const totalSum = arr.reduce((total, current) => total + current);
+  function isNumber(num) {
+    //  A number must be of type number and not NaN
+    return typeof num === 'number' && !Number.isNaN(num);
+  }
 
-    return totalSum / arr.length;
+  function getAverage(arr) {
+    //  Filter non valid numbers then get total
+    const onlyNumbers = arr.filter((element) => isNumber(element));
+    const totalSum = onlyNumbers.reduce((total, current) => (total += current));
+
+    return totalSum / onlyNumbers.length;
   }
 
   return {
