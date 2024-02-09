@@ -61,6 +61,13 @@ export function ceasarCipher(message, key = 1) {
     //  Shift letter
     letterCode += key;
 
+    //  Wrap around if shifted code is greater than Z or less than A
+    if (letterCode > 90) {
+      letterCode -= 26;
+    } else if (letterCode < 65) {
+      letterCode += 26;
+    }
+
     encrypted += String.fromCharCode(letterCode);
   }
 
