@@ -117,7 +117,7 @@ describe('Calculator', () => {
   });
 });
 
-describe('ceasarCipher', () => {
+describe('Ceasar cipher', () => {
   test('Ceasar cipher', () => {
     expect(ceasarCipher('SALAD', 1)).toBe('TBMBE');
   });
@@ -128,5 +128,13 @@ describe('ceasarCipher', () => {
 
   test('Key is negative', () => {
     expect(ceasarCipher('VINI', -1)).toBe('UHMH');
+  });
+
+  test('Letters wrap around Z', () => {
+    expect(ceasarCipher('Z', 1)).toBe('A');
+  });
+
+  test('Letters wrap around A', () => {
+    expect(ceasarCipher('A', -1)).toBe('Z');
   });
 });
