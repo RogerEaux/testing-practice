@@ -28,7 +28,14 @@ export const calculator = (function () {
     return x + y;
   }
 
+  function substract(x, y) {
+    if (!isNumber(x) || !isNumber(y)) return null;
+
+    return x - y;
+  }
+
   return {
     add,
+    substract,
   };
 })();
