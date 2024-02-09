@@ -51,7 +51,7 @@ export const calculator = (function () {
 })();
 
 export function caesarCipher(message, key = 1) {
-  if (typeof message !== 'string') return null;
+  if (typeof message !== 'string' || !Number.isInteger(key)) return null;
 
   //  Cipher uses upper case so all chars must be upper case
   message = message.toUpperCase();
